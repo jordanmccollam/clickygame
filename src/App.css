@@ -44,3 +44,7 @@
 .font-secondary {
   font-family: 'Squada One', cursive;
 }
+
+.bg-custom {
+  background: #83aeb7;
+}
