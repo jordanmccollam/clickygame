@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.font-primary {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.font-secondary {
+  font-family: 'Squada One', cursive;
+}
