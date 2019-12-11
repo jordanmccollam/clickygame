@@ -3,3 +3,17 @@ img {
     width: 100%;
     box-shadow: 0 10px 10px -10px rgba(0,0,0,.8);
 }
+
+.header-text {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+.shadow-text {
+    text-shadow: -2px 2px black;
+}
+
+.small-header {
+    height: 400px;
+}
