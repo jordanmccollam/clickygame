@@ -25,7 +25,7 @@ class App extends React.Component {
     this.setState({status: "incorrect"});
 
     // Display incorrect message
-    this.setState({message: "You guess incorrectly!"});
+    this.setState({message: "You guessed incorrectly!"});
 
     // Reset score
     this.setState({score: 0});
@@ -46,7 +46,7 @@ class App extends React.Component {
           });
 
           // Display correct message
-          this.setState({message: "You guess correctly!"});
+          this.setState({message: "You guessed correctly!"});
 
           // increase top score if necessary
           if (this.state.score >= this.state.topscore) {
