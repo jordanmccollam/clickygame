@@ -13,6 +13,7 @@ class App extends React.Component {
     score: 0,
     topscore: 0,
     message: "Click an image to beign!",
+    status: "starting"
   }
 
   gameOver = () => {
@@ -20,6 +21,8 @@ class App extends React.Component {
     this.state.cards.forEach(card => {
       card.count = 0;
     });
+
+    this.setState({status: "incorrect"});
 
     // Display incorrect message
     this.setState({message: "You guess incorrectly!"});
@@ -52,6 +55,8 @@ class App extends React.Component {
             });
           }
 
+          this.setState({status: "correct"});
+
           // Shuffle the cards
           this.state.cards.sort(() => Math.random() - 0.5)
           return true;
@@ -67,7 +72,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Nav score={this.state.score} topscore={this.state.topscore} message={this.state.message} />
+        <Nav 
+          score={this.state.score} 
+          topscore={this.state.topscore} 
+          message={this.state.message} 
+          status={this.state.status}
+        />
         <Header/>
         <div className="container mb-5 pb-5">
           <div className="row text-center">
